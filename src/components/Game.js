@@ -9,7 +9,7 @@ import {loadDetail} from '../actions/detailAction';
 
 const Game = ({name, released, image, id}) => {
     //Load Detail handler
-    const stringPathId = id.toString();
+    const stringPathId = id ? id.toString() : "" ;
     const dispatch = useDispatch();
     const loadDetailHandler = () => {
         document.body.style.overflow = "hidden";
